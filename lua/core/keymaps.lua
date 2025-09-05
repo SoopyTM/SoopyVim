@@ -6,7 +6,10 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
-
 -- nvim-tree
 vim.keymap.set('n', '<c-n>', ':NvimTreeFindFile<CR>')
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
+
+--Toggle Term
+
+vim.keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { noremap = true, silent = true })

@@ -1,6 +1,6 @@
 require("toggleterm").setup({
   size = 15,                          -- Height of horizontal terminal
-  open_mapping = [[<leader>t]],       -- Will be overridden by custom mapping below
+  open_mapping = [[<C-t>]],       -- Will be overridden by custom mapping below
   hide_numbers = true,
   shade_filetypes = {},
   shade_terminals = true,
@@ -12,7 +12,10 @@ require("toggleterm").setup({
   direction = "float",           -- Open terminal at the bottom
   close_on_exit = true,
   shell = vim.o.shell,
+  vim.api.nvim_create_autocmd("VimEnter", {
+        once = true,
+        callback = function()
+                pcall(vim.keymap.del, "i", "<space>t")
+        end,
 })
-
--- Custom key mapping for <leader>t to toggle the terminal
-vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+})

@@ -26,5 +26,21 @@ require("lazy").setup({
   dependencies = { {'nvim-tree/nvim-web-devicons'}}
   },
   -- amongst your other plugins
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+  {
+        "akinsho/toggleterm.nvim",
+        version = "*",
+        config = function()
+                require("toggleterm").setup()
+
+--                pcall(vim.keymap.del, "i", "<space>t")
+                vim.keymap.set("n", "<leader>t", "<Cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+        end,
+  },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  }
 })
