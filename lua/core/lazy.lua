@@ -1,5 +1,4 @@
 require("lazy").setup({
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   "tpope/vim-commentary",
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
@@ -42,5 +41,11 @@ require("lazy").setup({
     config = true
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
-  }
+  },
+  {
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+  },
 })
