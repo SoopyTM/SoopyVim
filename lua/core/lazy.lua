@@ -25,4 +25,6 @@ require("lazy").setup({
     
   dependencies = { {'nvim-tree/nvim-web-devicons'}}
   },
+  -- amongst your other plugins
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 })
