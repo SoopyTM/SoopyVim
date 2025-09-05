@@ -13,3 +13,4 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 --Toggle Term
 
 vim.keymap.set("n", "<leader>t", ":ToggleTerm<CR>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-t>", ":ToggleTerm<CR>", { noremap = true, silent = true })
