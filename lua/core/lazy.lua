@@ -19,4 +19,10 @@ require("lazy").setup({
     "nvim-telescope/telescope.nvim", tag = "0.1.4",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
+  {
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+    
+  dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  },
 })
