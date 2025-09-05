@@ -1,0 +1,5 @@
+require("core.plugin_config.colorscheme")
+require("core.plugin_config.lualine")
+require("core.plugin_config.nvimtree-config")
+require("core.plugin_config.telescope")
+require("core.plugin_config.treesitter")
